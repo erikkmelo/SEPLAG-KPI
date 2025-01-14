@@ -78,3 +78,15 @@ new Chart(document.getElementById('chart2'), config2);
 new Chart(document.getElementById('chart3'), config3);
 new Chart(document.getElementById('chart4'), config4);
 
+// Inicializando o mapa de São Vicente, SP
+const map = L.map('map').setView([-23.9574, -46.3883], 13);
+
+// Adicionando camadas de mapa (OpenStreetMap)
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Adicionando um marcador no centro de São Vicente
+L.marker([-23.9574, -46.3883]).addTo(map)
+  .bindPopup('São Vicente, SP')
+  .openPopup();
