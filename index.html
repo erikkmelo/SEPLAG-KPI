@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página com Gráficos</title>
+  <title>Página com Gráficos e Mapa</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha384-o9Rx06Npw3D69s5F9/wo9rM0tJtpW21EzEoSJ03J8YcTxYmiWxL48FxRxD0Jcr9g"
+    crossorigin=""
+  />
 </head>
 <body>
   <div class="container">
@@ -14,6 +21,7 @@
         <li><a href="#grafico2">Tema 2</a></li>
         <li><a href="#grafico3">Tema 3</a></li>
         <li><a href="#grafico4">Tema 4</a></li>
+        <li><a href="#mapa">Mapa</a></li>
       </ul>
     </nav>
     <main class="conteudo">
@@ -33,8 +41,19 @@
         <h2>Tema 4</h2>
         <canvas id="chart4"></canvas>
       </section>
+      <section id="mapa">
+        <h2>Mapa de São Vicente, SP</h2>
+        <div id="map" style="height: 400px;"></div>
+      </section>
     </main>
   </div>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha384-4Q6Op+db11RRJm1AjRUaP3eIvPqW8oKNpI08UhrhbOpjPY7TLn49lC6hwyHLaeYY"
+    crossorigin=""
+  ></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
