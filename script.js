@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Adicionando camadas de mapa (OpenStreetMap)
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    attribution: '&copy; <a href="https://www.openstreetmap.org">OpenStreetMap</a> contributors'
   }).addTo(map);
 
   // Adicionando um marcador no centro de São Vicente
