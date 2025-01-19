@@ -37,18 +37,19 @@
             padding: 20px;
         }
     </style>
+    <script>
+        // Carrega o menu comum dinamicamente
+        window.onload = function() {
+            fetch("menu.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("menu-container").innerHTML = data;
+                });
+        };
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Indicadores por Tema</h1>
-    </header>
-    <nav>
-        <a href="pagina1.html">Aspectos Demográficos</a>
-        <a href="pagina2.html">Desenvolvimento Produtivo</a>
-        <a href="pagina3.html">Cidade Conectada</a>
-        <a href="pagina4.html">Inclusão Social</a>
-        <a href="pagina5.html">Governança</a>
-    </nav>
+    <div id="menu-container"></div>
     <main>
         <p>Bem-vindo! Clique nos temas acima para explorar os gráficos e indicadores correspondentes.</p>
     </main>
