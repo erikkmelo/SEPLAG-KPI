@@ -18,40 +18,33 @@
             text-align: center;
         }
         nav {
-            margin: 0;
-            padding: 0;
+            background-color: #333;
             display: flex;
             justify-content: center;
-            background-color: #333;
         }
         nav a {
             color: white;
             text-decoration: none;
             padding: 15px 20px;
-            display: block;
         }
         nav a:hover {
             background-color: #555;
         }
         main {
             padding: 20px;
+            text-align: center;
         }
     </style>
-    <script>
-        // Carrega o menu comum dinamicamente
-        window.onload = function() {
-            fetch("menu.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("menu-container").innerHTML = data;
-                });
-        };
-    </script>
 </head>
 <body>
     <div id="menu-container"></div>
     <main>
-        <p>Bem-vindo! Clique nos temas acima para explorar os gráficos e indicadores correspondentes.</p>
+        <p>Bem-vindo! Selecione um tema no menu acima para explorar os indicadores.</p>
     </main>
+    <script>
+        fetch("menu.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("menu-container").innerHTML = data);
+    </script>
 </body>
 </html>
