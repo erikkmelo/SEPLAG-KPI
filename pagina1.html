@@ -6,82 +6,46 @@
     <title>Aspectos Demográficos</title>
     <style>
         body {
-            display: flex;
-            margin: 0;
             font-family: Arial, sans-serif;
+            margin: 0;
             background-color: #E8EAF6;
         }
-        #menu {
-            width: 20%;
+        header, nav {
             background-color: #1C2140;
             color: white;
-            padding: 15px;
         }
-        #menu ul {
-            list-style: none;
-            padding: 0;
-        }
-        #menu ul li {
-            margin: 10px 0;
-        }
-        #menu ul li a {
-            text-decoration: none;
+        nav a {
             color: white;
-            font-weight: bold;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
         }
-        #menu ul li a:hover {
-            color: #E8EAF6;
+        nav a:hover {
+            background-color: #555;
         }
         #content {
-            width: 80%;
             padding: 20px;
         }
-        .graphic-container {
-            margin-bottom: 30px;
-        }
     </style>
+    <script>
+        // Carrega o menu comum dinamicamente
+        window.onload = function() {
+            fetch("menu.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("menu-container").innerHTML = data;
+                });
+        };
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Indicadores por Tema</h1>
-    </header>
-    <nav>
-        <a href="pagina1.html">Aspectos Demográficos</a>
-        <a href="pagina2.html">Desenvolvimento Produtivo</a>
-        <a href="pagina3.html">Cidade Conectada</a>
-        <a href="pagina4.html">Inclusão Social</a>
-        <a href="pagina5.html">Governança</a>
-    </nav>
-    <div id="menu">
-        <h3>Indicadores</h3>
-        <ul>
-            <li><a href="#grafico1">Indicador 1</a></li>
-            <li><a href="#grafico2">Indicador 2</a></li>
-            <li><a href="#grafico3">Indicador 3</a></li>
-            <li><a href="#grafico4">Indicador 4</a></li>
-            <li><a href="#grafico5">Indicador 5</a></li>
-        </ul>
-    </div>
+    <div id="menu-container"></div>
     <div id="content">
-        <div id="grafico1" class="graphic-container">
+        <h2>Aspectos Demográficos</h2>
+        <p>Explore os gráficos e indicadores relacionados a Aspectos Demográficos.</p>
+        <div class="graphic-container">
             <h4>Indicador 1</h4>
             <iframe src="graficos/pag-01-graf-01.html" width="100%" height="400px" frameborder="0"></iframe>
-        </div>
-        <div id="grafico2" class="graphic-container">
-            <h4>Indicador 2</h4>
-            <iframe src="grafico2.html" width="100%" height="400px" frameborder="0"></iframe>
-        </div>
-        <div id="grafico3" class="graphic-container">
-            <h4>Indicador 3</h4>
-            <iframe src="grafico3.html" width="100%" height="400px" frameborder="0"></iframe>
-        </div>
-        <div id="grafico4" class="graphic-container">
-            <h4>Indicador 4</h4>
-            <iframe src="grafico4.html" width="100%" height="400px" frameborder="0"></iframe>
-        </div>
-        <div id="grafico5" class="graphic-container">
-            <h4>Indicador 5</h4>
-            <iframe src="grafico5.html" width="100%" height="400px" frameborder="0"></iframe>
         </div>
     </div>
 </body>
