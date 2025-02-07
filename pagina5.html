@@ -51,6 +51,7 @@
         #left-menu ul li a {
             color: white;
             text-decoration: none;
+            cursor: pointer;
         }
         #left-menu ul li a:hover {
             color: #E8EAF6;
@@ -87,12 +88,12 @@
         <div id="left-menu">
             <h3>Indicadores</h3>
             <ul>
-                <li><a href="#capag">Capacidade de Pagamento - CAPAG</a></li>
-                <li><a href="#icf">Indicador da Qualidade da Informação Fiscal e Contábil - ICF</a></li>
+                <li><a onclick="scrollToElement('capag')">Capacidade de Pagamento - CAPAG</a></li>
+                <li><a onclick="scrollToElement('icf')">Indicador da Qualidade da Informação Fiscal e Contábil - ICF</a></li>
             </ul>
         </div>
         <div id="content">
-            <img src="graf-pag-04/capag.png" alt="Capacidade de Pagamento - CAPAG">
+            <img id="capag" src="graf-pag-04/capag.png" alt="Capacidade de Pagamento - CAPAG">
             <div id="legend">
                 <ul>
                     <li>A classificação CAPAG (Capacidade de Pagamento), feita pelo Tesouro Nacional, avalia a situação fiscal de estados e municípios a partir da análise de endividamento, poupança corrente e liquidez.</li>
@@ -102,7 +103,7 @@
                     <li>Já a meta final, de 2032, reflete o avanço econômico, fiscal e institucional de São Vicente, colocando o município com classificação A.</li>
                 </ul>
             </div>
-            <img src="graf-pag-04/contabil.png" alt="Indicador da Qualidade da Informação Fiscal e Contábil - ICF">
+            <img id="icf" src="graf-pag-04/contabil.png" alt="Indicador da Qualidade da Informação Fiscal e Contábil - ICF">
             <div id="legend">
                 <ul>
                     <li>O ICF (Indicador da Qualidade da Informação Fiscal e Contábil no Siconfi) é obtido pela análise da qualidade da informação e consistência dos relatórios e demonstrativos contábeis e fiscais enviados pela União, por estados e por municípios ao Tesouro Nacional.</li>
@@ -118,7 +119,12 @@
         fetch("menu.html")
             .then(response => response.text())
             .then(data => document.getElementById("menu-container").innerHTML = data);
+        
+        function scrollToElement(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
+
 
