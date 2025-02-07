@@ -63,6 +63,10 @@
         .graphic-container {
             margin-bottom: 20px;
         }
+        /* Rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -71,34 +75,44 @@
         <div id="left-menu">
             <h3>Indicadores</h3>
             <ul>
-                <li><a href="#grafico1">Indicador 1</a></li>
-                <li><a href="#grafico2">Indicador 2</a></li>
-                <li><a href="#grafico3">Indicador 3</a></li>
-                <li><a href="#grafico4">Indicador 4</a></li>
-                <li><a href="#grafico5">Indicador 5</a></li>
+                <li><a href="#grafico1">01 - Mapa 01</a></li>
+                <li><a href="#grafico2">02 - Mapa 02</a></li>
+                <li><a href="#grafico3">03 - Crescimento Populacional</a></li>
+                <li><a href="#grafico4">04 - Território</a></li>
+                <li><a href="#grafico5">05 - Pirâmide Etária</a></li>
+                <li><a href="#grafico6">06 - População por Cor e Raça</a></li>
+                <li><a href="#grafico7">07 - Outros indicadores</a></li>
             </ul>
         </div>
         <div id="content">
             <h2>Aspectos Demográficos</h2>
             <div id="grafico1" class="graphic-container">
-                <h4>Indicador 1</h4>
-                <iframe src="graficos/razao-rend-medio.html" width="100%" height="600" frameborder="0"></iframe>
-            </div>
-            <div id="grafico2" class="graphic-container">
-                <h4>Indicador 2</h4>
+                <h4>01 - Mapa 01</h4>
                 <iframe src="mapas/3551009_schools_map.html" width="100%" height="600" frameborder="0"></iframe>
             </div>
-            <div id="grafico3" class="graphic-container">
-                <h4>Indicador 3</h4>
+            <div id="grafico2" class="graphic-container">
+                <h4>02 - Mapa 02</h4>
                 <iframe src="mapas/3551009_populacao (1).html" width="100%" height="600" frameborder="0"></iframe>
             </div>
+            <div id="grafico3" class="graphic-container">
+                <h4>03 - Crescimento Populacional</h4>
+                <img src="graf-00/cresc-pop.png" alt="Crescimento Populacional" width="100%">
+            </div>
             <div id="grafico4" class="graphic-container">
-                <h4>Indicador 4</h4>
-                <iframe src="graficos/demografico4.html" width="100%" height="600" frameborder="0"></iframe>
+                <h4>04 - Território</h4>
+                <img src="graf-00/territorio.png" alt="Território" width="100%">
             </div>
             <div id="grafico5" class="graphic-container">
-                <h4>Indicador 5</h4>
-                <iframe src="schools_map.html" width="100%" height="600" frameborder="0"></iframe>
+                <h4>05 - Pirâmide Etária</h4>
+                <img src="graf-00/piramide.png" alt="Pirâmide Etária" width="100%">
+            </div>
+            <div id="grafico6" class="graphic-container">
+                <h4>06 - População por Cor e Raça</h4>
+                <img src="graf-00/Cor e Raça.png" alt="População por Cor e Raça" width="100%">
+            </div>
+            <div id="grafico7" class="graphic-container">
+                <h4>07 - Outros indicadores</h4>
+                <img src="graf-00/outros.png" alt="Outros indicadores" width="100%">
             </div>
         </div>
     </div>
@@ -109,3 +123,4 @@
     </script>
 </body>
 </html>
+
