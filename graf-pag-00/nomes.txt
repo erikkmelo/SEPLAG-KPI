@@ -1,0 +1,8 @@
+01 - cresc-pop.png
+02 - territorio.png
+03 - piramide.png
+04 - Cor e Ra‡a.png
+05 - outros.png
+06 - outros.png
+gerador-de-nomes.bat
+nomes.txt
